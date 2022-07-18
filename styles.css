@@ -1,0 +1,80 @@
+body{
+    background-image: url("https://t3.ftcdn.net/jpg/03/60/64/46/360_F_360644673_kPbvAkfzjI7EA7XOxTA3FMA8ksT29W4k.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+
+}
+#heading{
+    font-family: "mySecondFont";
+    font-size: 60px;
+    letter-spacing: 2px;
+    color:gold;
+    text-shadow: 5px 5px white;
+}
+@font-face {
+    font-family: "myFirstFont";
+    src:url("Plaguard-ZVnjx.otf");
+ }
+ @font-face {
+    font-family: "mySecondFont";
+    src: url("PixelEmulator-xq08.ttf");
+ }
+ @font-face {
+    font-family: "myFont";
+    src: url("Starcruiser-Ewe4.otf");
+ }
+ @font-face {
+    font-family: "myFFont";
+    src: url("Digital7-1e1Z.ttf");
+ }
+.ip{
+    font-family: "myFont";
+    color:white;
+    background-color:rgb(103, 197, 8);
+    height:50px;
+    width:200px;
+    border-radius: 5px;
+    font-size: 25px;
+    text-shadow: 2px 2px darkgreen;
+    cursor:crosshair;
+}
+.ip:hover{
+    background-color: chartreuse;
+}
+#started{
+    color:red;
+    font-size: 30px;
+    font-family: "mySecondFont";
+}
+#userinput{
+    width:100px;
+    height:50px;
+    font-family: "myFFont";
+    font-size: 25px;
+    background-color:rgb(69, 91, 69);
+    color:rgb(34, 32, 32);
+    text-align: center;
+}
+#userinput:focus{
+  outline: 0px;
+}
+#statement{
+    font-family: "mySecondFont";
+    font-size: 20px;
+    color:#2e83f2
+
+}
+#status{
+    color:hotpink;
+    font-family: "myFFont";
+    font-size:30px;
+    letter-spacing: 3px;
+}
+#guesses{
+    color:green;
+    font-family:"myFFont";
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+ 

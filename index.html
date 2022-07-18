@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS THE NUMBER GAME</title>
+    <link rel="stylesheet" href="styles.css">
+    <script language="Javascript">
+        var random;
+        let status;
+        var count=1;
+        function randomno()
+        {
+            random=Math.floor(Math.random() * 100);
+            var started="LOADED";
+            document.getElementById('started').innerText=started;
+        }
+        function result()
+        {
+            let num=random;
+            let no = num.toString();
+            status="Correct Guess!!!\n\nRandom number was "+no+"!!!";
+            let guessno=count;
+            let  gsno= guessno.toString();
+            let guess="\nNo of Guesses:"+gsno;
+            if(count==1)
+            {
+                status="Wow you got at your first attempt!!!\n\nCorrect Guess!!!\n\nRandom number was "+no+"!!!"
+            }
+            document.getElementById('status').innerText=status;
+            document.getElementById('guesses').innerText=guess;
+
+        }
+        function check()
+        {
+            if(count==10)
+            {
+                alert("You have exceeded 10 guesses. Want to ReStart? Refresh to Reload and Start.");
+            }
+            var user=Number(document.getElementById('userinput').value);
+            if(user<0 || user>99)
+                {
+                    alert("Guess the number between 0 to 99 only!!!");
+                }
+            if(user>random)
+            {
+                status="Oops wrong guess!!\nYour number is too big!!!\n   Guess again!";
+                count++;
+            }
+            else if (user <random) {
+                status="Oops wrong guess!!\nYour number is too small!!!\nGuess again!";
+                count++;
+            }
+
+        if(user==random)
+        {
+           result();
+           count++;
+        }
+        
+        document.getElementById('status').innerText=status;
+        }
+    </script>
+</head>
+<body>
+    <center>
+    <p id="heading">GUESS THE NUMBER</p>
+    <form name="myform" method="post">
+        <input type="button" class="ip" value="Start" onclick="randomno();"><br><br>
+        <span id="started"></span><br><br>
+        <p id="statement">Guess Your Number (0-99) : </p><input id="userinput" type="text"><br><br>
+        <input type="button" class="ip" value="Guess" onclick="check();"><br><br>
+        <span id="status"></span><br>
+        <span id="guesses"></span>
+    </form>
+</center>
+</body>
+</html>
